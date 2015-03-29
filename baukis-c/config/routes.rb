@@ -11,6 +11,9 @@ Rails.application.routes.draw do
   namespace :customer do
     root 'top#index'
   end
+
+  root 'errors#not_found'
+  get '*anything' => 'errors#not_found'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
